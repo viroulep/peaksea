@@ -1,8 +1,8 @@
 " Vim color file --- psc (peak sea color) "Lite version"
 " Maintainer:	Pan, Shi Zhu <Go to the following URL for my email>
 " URL:		http://vim.sourceforge.net/scripts/script.php?script_id=760
-" Last Change:	19 May 2011
-" Version:	3.5
+" Last Change:	5 Feb 2010
+" Version:	3.4
 "
 "	Comments and e-mails are welcomed, thanks.
 "
@@ -44,7 +44,7 @@ if &background=='light'
   " LIGHT COLOR DEFINE START
 
   hi Normal		guifg=#000000	guibg=#e0e0e0	gui=NONE
-  hi Search		guifg=NONE	guibg=#f8f8f8	gui=NONE
+  hi Search		guifg=White	guibg=DarkRed	gui=NONE
   hi Visual		guifg=NONE	guibg=#a6caf0	gui=NONE
   hi Cursor		guifg=#f0f0f0	guibg=#008000	gui=NONE
   hi CursorIM		guifg=#f0f0f0	guibg=#800080   gui=NONE
@@ -80,7 +80,7 @@ if &background=='light'
   hi DiffText		guifg=NONE	guibg=#c0e080	gui=NONE
   hi SignColumn		guifg=fg	guibg=#90e090	gui=NONE
 
-  hi IncSearch		guifg=#f0f0f0	guibg=#806060	gui=NONE
+  hi IncSearch		guifg=White	guibg=DarkRed	gui=NONE
   hi StatusLineNC	guifg=fg	guibg=#c0c0c0	gui=NONE
   hi VertSplit		guifg=fg	guibg=#c0c0c0	gui=NONE
   hi Underlined		guifg=#6a5acd	guibg=NONE	gui=underline
@@ -155,10 +155,10 @@ if &background=='light'
     hi Normal		ctermfg=16	ctermbg=254	cterm=NONE
     " Comment/Uncomment the following line to disable/enable transparency
     "hi Normal		ctermfg=16	ctermbg=NONE	cterm=NONE
-    hi Search		ctermfg=NONE	ctermbg=231	cterm=NONE
+    hi Search		ctermfg=White	ctermbg=DarkRed	cterm=NONE
     hi Visual		ctermfg=NONE	ctermbg=153	cterm=NONE
     hi Cursor		ctermfg=255	ctermbg=28	cterm=NONE
-    hi CursorIM		ctermfg=255	ctermbg=90 cterm=NONE
+    " hi CursorIM	ctermfg=255	ctermbg=90
     hi Special		ctermfg=94	ctermbg=NONE	cterm=NONE
     hi Comment		ctermfg=58	ctermbg=NONE	cterm=NONE
     hi Number		ctermfg=94	ctermbg=NONE	cterm=NONE
@@ -193,7 +193,7 @@ if &background=='light'
     hi DiffText		ctermfg=NONE	ctermbg=150	cterm=NONE
     hi SignColumn	ctermfg=fg	ctermbg=114	cterm=NONE
 
-    hi IncSearch	ctermfg=255	ctermbg=95	cterm=NONE
+    hi IncSearch	ctermfg=White	ctermbg=DarkRed	cterm=NONE
     hi StatusLineNC	ctermfg=fg	ctermbg=250	cterm=NONE
     hi VertSplit	ctermfg=fg	ctermbg=250	cterm=NONE
     hi Underlined	ctermfg=62	ctermbg=NONE	cterm=underline
@@ -266,11 +266,11 @@ elseif &background=='dark'
   hi Special		guifg=#e0c060	guibg=NONE	gui=NONE
   hi Error		guifg=#f08060	guibg=NONE	gui=NONE
   hi Todo		guifg=#800000	guibg=#d0d090	gui=NONE
-  hi Search		guifg=NONE	guibg=#800000	gui=NONE
+  hi Search		guifg=White	guibg=DarkRed	gui=NONE
   hi Visual		guifg=#000000	guibg=#a6caf0	gui=NONE
   hi Cursor		guifg=#000000	guibg=#00f000	gui=NONE
   " NOTE THIS IS IN THE COOL SECTION
-  hi CursorIM		guifg=#000000	guibg=#f0c0f0	gui=NONE
+  " hi CursorIM		guifg=#000000	guibg=#f000f0	gui=NONE
   hi StatusLine		guifg=#000000	guibg=#a6caf0	gui=NONE
   hi LineNr		guifg=#b0b0b0	guibg=NONE	gui=NONE
   hi Question		guifg=#000000	guibg=#d0d090	gui=NONE
@@ -284,14 +284,14 @@ elseif &background=='dark'
   hi Title		guifg=#f0c0f0	guibg=NONE	gui=NONE
   hi WarningMsg		guifg=#f08060	guibg=NONE	gui=NONE
   hi WildMenu		guifg=#000000	guibg=#d0d090	gui=NONE
-  hi Folded		guifg=NONE	guibg=#004000	gui=NONE
-  hi FoldColumn		guifg=#e0e0e0	guibg=#008000	gui=NONE
+  hi Folded		guifg=#aaaaaa	guibg=#333333	gui=NONE
+  hi FoldColumn		guifg=#202020	guibg=#202020	gui=NONE
   hi DiffAdd		guifg=NONE	guibg=#000080	gui=NONE
   hi DiffChange		guifg=NONE	guibg=#800080	gui=NONE
   hi DiffDelete		guifg=#6080f0	guibg=#202020	gui=NONE
   hi DiffText		guifg=#000000	guibg=#c0e080	gui=NONE
   hi SignColumn		guifg=#e0e0e0	guibg=#008000	gui=NONE
-  hi IncSearch		guifg=#000000	guibg=#d0d0d0	gui=NONE
+  hi IncSearch		guifg=White	guibg=DarkRed	gui=NONE
   hi StatusLineNC	guifg=#000000	guibg=#c0c0c0	gui=NONE
   hi VertSplit		guifg=#000000	guibg=#c0c0c0	gui=NONE
   hi Underlined		guifg=#80a0ff	guibg=NONE	gui=underline 
@@ -340,8 +340,6 @@ elseif &background=='dark'
 
   if &t_Co==8 || &t_Co==16
     " for 8-color and 16-color term
-    " Note: if you want transparent, change all ctermbg=NONE
-    " from hi Normal to hi DiffDelete, and hi TabLineSel, CursorLine
     hi Normal		ctermfg=LightGrey   ctermbg=Black
     hi Special		ctermfg=Yellow	    ctermbg=bg
     hi Comment		ctermfg=DarkYellow  ctermbg=bg
@@ -502,11 +500,11 @@ elseif &background=='dark'
     hi Special		ctermfg=179	ctermbg=NONE	cterm=NONE
     hi Error		ctermfg=209	ctermbg=NONE	cterm=NONE
     hi Todo		ctermfg=88	ctermbg=186	cterm=NONE
-    hi Search		ctermfg=NONE	ctermbg=88	cterm=NONE
+    hi Search		ctermfg=White	ctermbg=DarkRed	cterm=NONE
     hi Visual		ctermfg=16	ctermbg=153	cterm=NONE
     hi Cursor		ctermfg=16	ctermbg=46	cterm=NONE
     " NOTE THIS IS IN THE COOL SECTION
-    hi CursorIM		ctermfg=16	ctermbg=219	cterm=NONE
+    " hi CursorIM	ctermfg=16	ctermbg=201	cterm=NONE
     hi StatusLine	ctermfg=16	ctermbg=153	cterm=NONE
     hi LineNr		ctermfg=249	ctermbg=NONE	cterm=NONE
     hi Question		ctermfg=16	ctermbg=186	cterm=NONE
@@ -523,13 +521,13 @@ elseif &background=='dark'
     hi WarningMsg	ctermfg=209	ctermbg=NONE	cterm=NONE
     hi WildMenu		ctermfg=16	ctermbg=186	cterm=NONE
     hi Folded		ctermfg=NONE	ctermbg=22	cterm=NONE
-    hi FoldColumn	ctermfg=254	ctermbg=28	cterm=NONE
+    hi FoldColumn	ctermfg=254	ctermbg=250	cterm=NONE
     hi DiffAdd		ctermfg=NONE	ctermbg=18	cterm=NONE
     hi DiffChange	ctermfg=NONE	ctermbg=90	cterm=NONE
     hi DiffDelete	ctermfg=69	ctermbg=234	cterm=NONE
     hi DiffText		ctermfg=16	ctermbg=150	cterm=NONE
     hi SignColumn	ctermfg=254	ctermbg=28	cterm=NONE
-    hi IncSearch	ctermfg=16	ctermbg=252	cterm=NONE
+    hi IncSearch	ctermfg=White	ctermbg=DarkRed	cterm=NONE
     hi StatusLineNC	ctermfg=16	ctermbg=250	cterm=NONE
     hi VertSplit	ctermfg=16	ctermbg=250	cterm=NONE
     hi Underlined	ctermfg=111	ctermbg=NONE	cterm=underline 
@@ -554,8 +552,8 @@ elseif &background=='dark'
       hi PmenuSel	ctermfg=16	ctermbg=252	cterm=NONE
       hi PmenuSbar	ctermfg=fg	ctermbg=18	cterm=NONE
       hi PmenuThumb	ctermfg=fg	ctermbg=28	cterm=NONE
-      hi TabLine	ctermfg=fg	ctermbg=28	cterm=NONE
-      hi TabLineFill	ctermfg=fg	ctermbg=28	cterm=NONE
+      hi TabLine	ctermfg=234	ctermbg=250	cterm=NONE
+      hi TabLineFill	ctermfg=234	ctermbg=250	cterm=NONE
       hi TabLineSel	ctermfg=fg	ctermbg=NONE	cterm=NONE
       hi CursorColumn	ctermfg=NONE	ctermbg=88	cterm=NONE
       hi CursorLine	ctermfg=NONE	ctermbg=NONE	cterm=underline
@@ -592,6 +590,10 @@ hi link		CalToday	PreProc
 " these are used by TagList
 hi link		MyTagListTagName	IncSearch
 hi link		MyTagListTagScope	Constant
+
+hi TabLineFill guifg=#9098a0 guibg=#111111
+hi TabLine guifg=black guibg=#888888
+hi TabLineSel guifg=white guibg=#202020 gui=bold
 
 " COLOR LINKS DEFINE END
 
